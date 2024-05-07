@@ -1,11 +1,14 @@
-const user = require ('user')
+const Joi = require ('joi')
 
-const usersSchema = user.object({
-    produtos: user.array().items({
-        nome: user.string(),
-        email: user.string(),
-        password: user.string(),
-        administrador: user.string()
+const userSchema = Joi.object({
+    quantidade: Joi.number(),
+    usuarios: Joi.array().items({
+        nome: Joi.string(),
+        email: Joi.string(),
+        preco: Joi.number(),
+        password: Joi.string(),
+        administrador: Joi.string(),
+        _id: Joi.string()
     })
 })
 export default userSchema;

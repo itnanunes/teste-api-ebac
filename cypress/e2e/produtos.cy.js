@@ -3,7 +3,7 @@ import contrato from '../contracts/produtos.contract'
 
 describe('Testes da Funcionalidade Produtos', () => {
     let token
-    before(() => {
+    before(() => {http://localhost:3000/__/#/runs
         cy.token('fulano@qa.com', 'teste').then(tkn => { token = tkn })
     });
 
